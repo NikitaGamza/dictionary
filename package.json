@@ -1,0 +1,26 @@
+{
+    "name": "dictionary",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "start": "node server.js",
+        "build": "dictionary-script build",
+        "test": "editorconfig-checker --exclude '.git|node_modules'",
+        "eject": "dictionary-script eject"
+    },
+    "license": "MIT",
+    "type": "module",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1",
+        "mongodb": "^3.6.3",
+        "pug": "^3.0.0",
+        "editorconfig-checker": "^4.0.2",
+        "@testing-library/jest-dom": "^5.14.1",
+        "@testing-library/react": "^11.2.7",
+        "@testing-library/user-event": "^12.8.3"
+    },
+    "devDependencies": {
+        "@types/node": "^14.14.16"
+    }
+}
