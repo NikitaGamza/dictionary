@@ -1,0 +1,11 @@
+doctype html
+head
+    link(rel="stylesheet" href="styles.css")
+    //- link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/css/uikit.min.css")
+    title= title
+div.container
+  a.add(href=`/form`) 
+    h4.add__title Добавить термин
+  each item in result 
+    a.link(href=`/${item.name}`)
+      h4.link__title= item.name

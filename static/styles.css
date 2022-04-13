@@ -1,0 +1,97 @@
+*{
+  margin: 0;
+  padding: 0;
+  background: #363636;
+}
+
+.background{
+  color: #363636;
+  height: 100%;
+  width: 100%;
+
+  position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:hidden;
+    z-index:-1; /* Remove this line if it's not going to be a background! */
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 900px;
+  height: auto;
+}
+
+.add{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid aliceblue;
+  display: block;
+  width: fit-content;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.add:hover{
+  color: green;
+  border: 2px solid green;
+  opacity: 0.6;
+}
+
+.add__title{
+  color: aliceblue;
+  font-size: large;
+  text-decoration: none;
+}
+
+.add__title:hover{
+  color: greenyellow;
+}
+
+.link{
+  /* height: 35px; */
+  display: block;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  user-select: none;
+  padding: .5em 2em;
+  outline: none;
+  border: 2px solid;
+  border-radius: 1px;
+  transition: 0.2s;
+
+  margin-bottom: 10px;
+}
+
+.link:hover{
+  border: 2px solid white;
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.link__title{
+  color: white;
+}
+
+.description{
+  color: white;
+}
+
+.description__title{
+  color: white;
+}
+
+.knopka{
+  color: white;
+}
+
+.term{
+  background-color: lightgray;
+}
+
+.term__text{
+  background-color: lightgray;
+}

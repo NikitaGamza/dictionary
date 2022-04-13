@@ -1,0 +1,33 @@
+doctype html
+head
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/css/uikit.min.css")
+    link(rel="stylesheet" href="styles.css")
+    title= title
+div.background
+    div.container.uk-flex.uk-flex-column
+        form(id="form"  class="uk-flex uk-flex-column container_small" enctype="multipart/form-data")
+            div.uk-margin-small
+                input(type='text' class="uk-input term" name="name" placeholder='Введите термин')
+            div.uk-margin-small
+                textarea(placeholder='Введите определение' name="value" class="uk-textarea term__text")
+            div.uk-margin-small
+            button.uk-button.uk-button-default.knopka Сохранить
+script.
+    const form = document.querySelector('#form')
+    form.addEventListener('submit', function (evt) {
+        evt.preventDefault()
+        const name = document.querySelector('input[name="name"]').value
+        const value = document.querySelector('textarea').value
+        const data = JSON.stringify({name, value})
+        fetch('/add-word', {
+            method: 'POST',
+            body: data,
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(function (result) {
+            return result.text()
+        }).then(function (data) {
+            console.log(data);
+        })
+    })
